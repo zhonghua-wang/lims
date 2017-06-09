@@ -1,1 +1,3 @@
 Mezzanine==4.2.3
+mezzanine-api
+django-scheduler

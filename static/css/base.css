@@ -2,21 +2,35 @@
     margin-top: 50px;
 }
 
-.main-content{
+.main-content {
+    /*margin-top: auto;*/
+    min-height: 98%;
+
+
+}
+
+.content-body {
+    margin-top: 80px;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    height: 100%;
 }
+
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+
+    /*margin-bottom: 60px;*/
+    height: 100%;
 }
+
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
+    background-color: transparent;
+    border-top: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
 }

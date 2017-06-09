@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-09 00:22+0000\n"
+"POT-Creation-Date: 2017-06-09 06:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: lims/settings.py:116
-msgid "English"
-msgstr "英文"
-
-#: lims/settings.py:117
+#: lims/settings.py:114
 msgid "Chinese"
-msgstr "中文"
+msgstr ""
 
 #: templates/accounts/account_login.html:7
 msgid ""
@@ -37,16 +33,14 @@ msgstr ""
 msgid ""
 "If you don't have an account you can <a href=\"%(signup_url)s?next=%(next)s"
 "\">sign up</a> for one now."
-msgstr "如果您还没有注册，请到<a href=\"%(signup_url)s?next=%(next)s"
-"\">此处注册</a>。"
+msgstr ""
 
 #: templates/accounts/account_login.html:14
 #, python-format
 msgid ""
 "<p>You can also <a href=\"%(password_reset_url)s?next=%(profile_update_url)s"
 "\">reset your password</a> if you've forgotten it.</p>"
-msgstr "如果您忘记了密码，请<a href=\"%(password_reset_url)s?next=%(profile_update_url)s"
-"\">重置密码</a>"
+msgstr ""
 
 #: templates/accounts/account_password_reset.html:6
 msgid ""
@@ -57,13 +51,13 @@ msgstr ""
 #: templates/accounts/account_profile.html:18
 #: templates/accounts/includes/user_panel.html:11
 msgid "Update profile"
-msgstr "更新资料"
+msgstr ""
 
 #: templates/accounts/account_signup.html:7
 msgid ""
 "You're already logged in. If you'd like to create a new account, you'll need "
 "to log out first."
-msgstr "您已经登录，如果想创建新的账户，请注销后重试。"
+msgstr ""
 
 #: templates/accounts/account_signup.html:11
 msgid ""
@@ -89,6 +83,7 @@ msgstr ""
 
 #: templates/accounts/includes/user_panel.html:20
 #: templates/accounts/includes/user_panel_nav.html:14
+#: templates/admin/login.html:63
 msgid "Log in"
 msgstr ""
 
@@ -101,49 +96,169 @@ msgstr ""
 msgid "Sign up"
 msgstr ""
 
-#: templates/base.html:61
-msgid "Toggle Navigation"
+#: templates/admin/base_site.html:13
+msgid "View site"
 msgstr ""
 
-#: templates/blog/blog_post_detail.html:29
-#: templates/blog/blog_post_list.html:85
-msgid "Posted by"
-msgstr "作者"
+#: templates/admin/conf/setting/change_list.html:8
+#: templates/includes/form_errors.html:8
+msgid "Please correct the errors below."
+msgstr ""
 
+#: templates/admin/conf/setting/change_list.html:31
+#: templates/includes/editable_form.html:16
+msgid "Save"
+msgstr ""
+
+#: templates/admin/forms/change_form.html:5
+#: templates/admin/forms/entries.html:56
+msgid "View entries"
+msgstr ""
+
+#: templates/admin/forms/entries.html:13 templates/admin/index.html:15
+#: templates/index.html:4 templates/index.html:5 templates/index.html:8
+#: templates/pages/menus/breadcrumb.html:4
+#: templates/pages/menus/breadcrumb.html:10
+#: templates/pages/menus/dropdown.html:10
+#: templates/pages/menus/footer_tree.html:11
+#: templates/pages/menus/mobile.html:10 templates/pages/menus/primary.html:8
+#: templates/pages/menus/tree.html:9 templates/search_results.html:13
+msgid "Home"
+msgstr ""
+
+#: templates/admin/forms/entries.html:27
+msgid "Field"
+msgstr ""
+
+#: templates/admin/forms/entries.html:28
+msgid "Include"
+msgstr ""
+
+#: templates/admin/forms/entries.html:29
+msgid "Filter by"
+msgstr ""
+
+#: templates/admin/forms/entries.html:47
+msgid "All"
+msgstr ""
+
+#: templates/admin/forms/entries.html:55 templates/admin/forms/entries.html:92
+msgid "Back to form"
+msgstr ""
+
+#: templates/admin/forms/entries.html:57
+msgid "Export CSV"
+msgstr ""
+
+#: templates/admin/forms/entries.html:59
+msgid "Entries"
+msgstr ""
+
+#: templates/admin/forms/entries.html:93
+msgid "Delete selected"
+msgstr ""
+
+#: templates/admin/forms/entries.html:97
+msgid "No entries to display"
+msgstr ""
+
+#: templates/admin/includes/app_list.html:20
+#: templates/admin/includes/content_typed_change_list.html:24
+#: templates/pages/menus/admin.html:31
+msgid "Add"
+msgstr ""
+
+#: templates/admin/includes/app_list.html:27
+#: templates/includes/language_selector.html:19
+msgid "Change"
+msgstr ""
+
+#: templates/admin/includes/quick_blog.html:18
+msgid "Quick Blog"
+msgstr ""
+
+#: templates/admin/includes/quick_blog.html:27
+msgid "Save Draft"
+msgstr ""
+
+#: templates/admin/includes/recent_actions.html:4
+msgid "Recent Actions"
+msgstr ""
+
+#: templates/admin/includes/recent_actions.html:5
+msgid "My Actions"
+msgstr ""
+
+#: templates/admin/includes/recent_actions.html:9
+msgid "None available"
+msgstr ""
+
+#: templates/admin/includes/recent_comments.html:4
+msgid "Recent Comments"
+msgstr ""
+
+#: templates/admin/includes/recent_comments.html:22
 #: templates/blog/blog_post_detail.html:33
 #: templates/blog/blog_post_list.html:97
 #: templates/generic/includes/comment.html:22
 #: templates/generic/includes/comment.html:59
 #, python-format
 msgid "%(sometime)s ago"
-msgstr "%(sometime)s前"
+msgstr "%(sometime)s 前"
 
-#: templates/blog/blog_post_detail.html:43
-#: templates/blog/blog_post_list.html:136
-#: templates/generic/includes/comments.html:3
-msgid "Comments"
+#: templates/admin/index.html:17
+msgid "Dashboard"
 msgstr ""
 
-#: templates/blog/blog_post_detail.html:46
-#: templates/blog/blog_post_list.html:140
-#, python-format
-msgid "%(comments_count)s comment"
-msgid_plural "%(comments_count)s comments"
-msgstr[0] ""
-msgstr[1] ""
+#: templates/admin/login.html:24
+msgid "You don't have permission to access the admin for this site."
+msgstr ""
+
+#: templates/admin/login.html:31
+msgid "Username or email:"
+msgstr ""
+
+#: templates/admin/login.html:35
+msgid "Password:"
+msgstr ""
+
+#: templates/admin/login.html:42
+msgid "Language"
+msgstr ""
+
+#: templates/admin/login.html:53
+msgid "Interface:"
+msgstr ""
+
+#: templates/admin/login.html:56 templates/includes/editable_toolbar.html:8
+msgid "Admin"
+msgstr ""
+
+#: templates/admin/login.html:59
+msgid "Site"
+msgstr ""
+
+#: templates/admin/login.html:66
+msgid "Forgot password?"
+msgstr ""
+
+#: templates/admin/profile_inline.html:10
+msgid "Profile information"
+msgstr ""
+
+#: templates/base.html:61 templates/customed_base.html:61
+msgid "Toggle Navigation"
+msgstr ""
+
+#: templates/blog/blog_post_detail.html:29
+#: templates/blog/blog_post_list.html:85
+msgid "Posted by"
+msgstr ""
 
 #: templates/blog/blog_post_detail.html:74
 #: templates/blog/blog_post_list.html:121
 #: templates/blog/includes/filter_panel.html:56
 msgid "Tags"
-msgstr ""
-
-#: templates/blog/blog_post_detail.html:93
-msgid "Share on Twitter"
-msgstr ""
-
-#: templates/blog/blog_post_detail.html:94
-msgid "Share on Facebook"
 msgstr ""
 
 #: templates/blog/blog_post_detail.html:119
@@ -188,7 +303,19 @@ msgstr ""
 
 #: templates/blog/blog_post_list.html:130 templates/search_results.html:47
 msgid "read more"
+msgstr "更多"
+
+#: templates/blog/blog_post_list.html:136
+#: templates/generic/includes/comments.html:3
+msgid "Comments"
 msgstr ""
+
+#: templates/blog/blog_post_list.html:140
+#, python-format
+msgid "%(comments_count)s comment"
+msgid_plural "%(comments_count)s comments"
+msgstr[0] ""
+msgstr[1] ""
 
 #: templates/blog/includes/filter_panel.html:6
 msgid "Recent Posts"
@@ -367,32 +494,16 @@ msgstr ""
 msgid "Rate"
 msgstr ""
 
-#: templates/includes/editable_form.html:16
-msgid "Save"
-msgstr ""
-
 #: templates/includes/editable_form.html:17
 msgid "Cancel"
 msgstr ""
 
 #: templates/includes/editable_form.html:25
 msgid "Edit"
-msgstr "编辑"
-
-#: templates/includes/editable_toolbar.html:8
-msgid "Admin"
-msgstr "管理"
-
-#: templates/includes/form_errors.html:8
-msgid "Please correct the errors below."
-msgstr "请修改以下错误。"
+msgstr ""
 
 #: templates/includes/form_fields.html:26
 msgid "required"
-msgstr ""
-
-#: templates/includes/language_selector.html:19
-msgid "Change"
 msgstr ""
 
 #: templates/includes/pagination.html:7
@@ -405,25 +516,15 @@ msgstr ""
 
 #: templates/includes/search_form.html:5
 msgid "Search"
-msgstr "检索"
+msgstr ""
 
 #: templates/includes/search_form.html:14
 msgid "Everything"
-msgstr "所有"
+msgstr ""
 
 #: templates/includes/search_form.html:26
 msgid "Go"
-msgstr "搜索"
-
-#: templates/index.html:4 templates/index.html:5 templates/index.html:8
-#: templates/pages/menus/breadcrumb.html:4
-#: templates/pages/menus/breadcrumb.html:10
-#: templates/pages/menus/dropdown.html:10
-#: templates/pages/menus/footer_tree.html:11
-#: templates/pages/menus/mobile.html:10 templates/pages/menus/primary.html:8
-#: templates/pages/menus/tree.html:9 templates/search_results.html:13
-msgid "Home"
-msgstr "首页"
+msgstr ""
 
 #: templates/index.html:12
 msgid ""
@@ -453,10 +554,6 @@ msgstr ""
 
 #: templates/pages/form.html:29
 msgid "Submit"
-msgstr ""
-
-#: templates/pages/menus/admin.html:31
-msgid "Add"
 msgstr ""
 
 #: templates/search_results.html:5 templates/search_results.html:6

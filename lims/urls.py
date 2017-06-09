@@ -28,6 +28,7 @@ if settings.USE_MODELTRANSLATION:
     ]
 
 urlpatterns += [
+    # url("^api/", include("mezzanine_api.urls")),
     # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
 
@@ -78,6 +79,8 @@ urlpatterns += [
     # ``mezzanine.urls``, go right ahead and take the parts you want
     # from it, and use them directly below instead of using
     # ``mezzanine.urls``.
+    ###
+    url("^instrument/", include("instrument.urls")),
     url("^", include("mezzanine.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX

@@ -6,7 +6,6 @@ import os
 from django import VERSION as DJANGO_VERSION
 from django.utils.translation import ugettext_lazy as _
 
-
 ######################
 # MEZZANINE SETTINGS #
 ######################
@@ -86,7 +85,6 @@ from django.utils.translation import ugettext_lazy as _
 # INSTALLED_APPS setting.
 USE_MODELTRANSLATION = False
 
-
 ########################
 # MAIN DJANGO SETTINGS #
 ########################
@@ -109,12 +107,12 @@ USE_TZ = True
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "zh_Hans"
+LANGUAGE_CODE = "zh-hans"
 
 # Supported languages
 LANGUAGES = (
-    ('en', _('English')),
-    ('zh_Hans', _('Chinese')),
+    ('zh', ('简体中文')),
+    # ('en', _('English'))
 
 )
 
@@ -131,13 +129,13 @@ SITE_ID = 1
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
 USE_I18N = True
+USE_L10N = True
 
 AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
 
 # The numeric mode to set newly-uploaded files to. The value should be
 # a mode you'd pass directly to os.chmod.
 FILE_UPLOAD_PERMISSIONS = 0o644
-
 
 #############
 # DATABASES #
@@ -159,7 +157,6 @@ DATABASES = {
         "PORT": "",
     }
 }
-
 
 #########
 # PATHS #
@@ -216,6 +213,7 @@ TEMPLATES = [
                 "django.template.context_processors.tz",
                 "mezzanine.conf.context_processors.settings",
                 "mezzanine.pages.context_processors.page",
+                "django.core.context_processors.request",
             ],
             "builtins": [
                 "mezzanine.template.loader_tags",
@@ -227,12 +225,15 @@ TEMPLATES = [
 if DJANGO_VERSION < (1, 9):
     del TEMPLATES[0]["OPTIONS"]["builtins"]
 
-
 ################
 # APPLICATIONS #
 ################
 
 INSTALLED_APPS = (
+    # 'mezzanine_api',
+    # 'rest_framework',
+    # 'rest_framework_swagger',
+    # 'oauth2_provider',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -248,6 +249,7 @@ INSTALLED_APPS = (
     "mezzanine.pages",
     "mezzanine.blog",
     "mezzanine.forms",
+    "schedule",
     # "mezzanine.galleries",
     # "mezzanine.twitter",
     "mezzanine.accounts",
@@ -259,6 +261,7 @@ INSTALLED_APPS = (
 # these middleware classes will be applied in the order given, and in the
 # response phase the middleware will be applied in reverse order.
 MIDDLEWARE_CLASSES = (
+    # "mezzanine_api.middleware.ApiMiddleware",
     "mezzanine.core.middleware.UpdateCacheMiddleware",
 
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -310,17 +313,22 @@ OPTIONAL_APPS = (
 # Instead of doing "from .local_settings import *", we use exec so that
 # local_settings has full access to everything defined in this module.
 # Also force into sys.modules so it's visible to Django's autoreload.
+### rest api
+# try:
+#     from mezzanine_api.settings import *
+# except ImportError:
+#     pass
 
 f = os.path.join(PROJECT_APP_PATH, "local_settings.py")
 if os.path.exists(f):
     import sys
     import imp
+
     module_name = "%s.local_settings" % PROJECT_APP
     module = imp.new_module(module_name)
     module.__file__ = f
     sys.modules[module_name] = module
-    exec(open(f, "rb").read())
-
+    exec (open(f, "rb").read())
 
 ####################
 # DYNAMIC SETTINGS #
@@ -342,3 +350,10 @@ else:
 LOCALE_PATHS = (
     os.path.join(PROJECT_ROOT, 'locale'),
 )
+
+# upload directory
+UPLOAD_FOLDER = "uploads"
+
+# custom user
+
+ACCOUNTS_PROFILE_MODEL = "instrument.User"
